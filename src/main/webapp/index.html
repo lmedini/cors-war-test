@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS filter test - index</title>
+</head>
+<body>
+<h1>CORS filter test</h1>
+<p>This page will load successfully, but the response will contain the CORS headers specified in the CorsFilter configuration.</p>
+
+<p>Click on <a href="interface.jsp">this link</a> to send a GET request
+    that passes the CorsFilter, even when behind an nginx proxy.</p>
+<form method="post" action="interface.jsp">
+    <p>Submitting this form will produce a CORS with preflight request
+        that does not pass the CorsFilter when behind an nginx proxy.<br>
+        <input type="submit" value="test POST request">
+    </p>
+</form>
+</body>
+</html>
